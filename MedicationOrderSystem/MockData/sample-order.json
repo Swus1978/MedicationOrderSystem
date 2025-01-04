@@ -1,0 +1,7 @@
+{
+  "MedicationName": "jubilia",
+  "MedicationType": "Analeptic",
+  "Quantity": 13,
+  "Distributor": "Empsephar",
+  "PharmacyBranch": ["Main", "Secondary"]
+}

@@ -1,0 +1,22 @@
+@model MedicationOrderSystem.Models.OrderViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Order Summary";
+    ViewData["HeaderTitle"] = "Order Summary";
+}
+
+<div class="container">
+    <h2>@ViewData["HeaderTitle"]</h2>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Medication Name:</strong> @Model.MedicationName</li>
+        <li class="list-group-item"><strong>Medication Type:</strong> @Model.MedicationType</li>
+        <li class="list-group-item"><strong>Quantity:</strong> @Model.Quantity</li>
+        <li class="list-group-item"><strong>Distributor:</strong> @Model.Distributor</li>
+        <li class="list-group-item"><strong>Pharmacy Branch:</strong> @Model.PharmacyBranch</li>
+    </ul>
+    <form method="post" action="/Order/Submit" class="mt-3">
+        <button type="submit" class="btn btn-success">Confirm Order</button>
+    </form>
+    <a href="/" class="btn btn-primary mt-3">Back to Main Page</a>
+</div>
